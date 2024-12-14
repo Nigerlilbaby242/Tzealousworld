@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzealous World </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section (Logo, Center Links, Menu Icons) -->
+    <header>
+        <div class="logo">
+            <img src="Snapchat-1795739813.jpg" alt="logo
+            ">
+        </div>
+
+        <!-- Navigation Links (Centered) -->
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">New</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="Women.html">Women</a></li>
+                <li><a href="Underwears.html">Underwear</a>
+            </ul>
+        </nav>
+
+        <!-- Right Icons (User, Bag) -->
+        <nav class="nav-icons">
+            <ul>
+                <!-- <li><a href="#"><i class="fas fa-user"></i></a></li> -->
+                <li><a id="cart-icon" href="#"><i class="fas fa-shopping-bag"></i><span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+        <!-- Example Product Cards -->
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Up And Down.jpeg"  alt="Tzealous Whimsical ride">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Vibe Activewear DUO </h3>
+            <p class="price">₦82,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Vibe Activeear DUO" data-price="82999" data-image="Tzealous Up And Down.jpeg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Whimsical ride.jpeg"  alt="Tzealous Whimsical ride">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Whimsical ride (Crop Top)</h3>
+            <p class="price">₦49,899</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Whimsical ride" data-price="49,899" data-image="Tzealous Whimsical ride.jpeg">Add to Bag</button>
+        </article>
+
+        
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Athletic Edge.jpeg"  alt="TZW Athletic Edge">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>TZW Athletic Edge (Custom Made for Individuals) </h3>
+            <p class="price">₦34,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="TZW Athletic Edge" data-price="34,999" data-image="TZW Athletic Edge">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="TZW Adventure HUB.jpg"  alt="TZW Adventure HUB">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>TZW Adventure HUB Black</h3>
+            <p class="price">₦21,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="TZW Adventure HUB Black" data-price="21,999" data-image="TZW Adventure HUB.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="TZW Adventure Hub White.png"  alt="TZW Adventure HUB">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>TZW Adventure HUB White</h3>
+            <p class="price">₦21,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="TZW Adventure HUB White" data-price="21,999" data-image="TZW Adventure HUB.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Rebel Buzz.jpeg"  alt="Tzealous Rebel Buzz">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Rebel Buzz</h3>
+            <p class="price">₦74,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Rebel Buzz" data-price="74999" data-image="Rebel Buzz.jpeg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="TZW racing club.jpg" class="image1" alt="TZW racing club">
+                <img src="TZW Racing Club back.jpg" class="image2" alt="Chill & Thrill white">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>TZW racing club</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="TZW racing club." data-price="49,999" data-image="TZW racing club.jpg">Add to Bag</button>
+        </article>
+
+
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Chill & Thrill white front.jpg" class="image1" alt="Chill & Thrill white">
+                <img src="Chill & Thrill white back.jpg" class="image2" alt="Chill & Thrill white">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill White</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill white" data-price="49,999" data-image="Chill & Thrill white front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Chill & Thrill black front.jpg" class="image1" alt="Chill & Thrill black">
+                <img src="Chill & Thrill black back.jpg" class="image2" alt="Chill & Thrill black">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Black</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill black" data-price="49,999" data-image="Chill & Thrill black front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Chill & Thrill blue front.jpg" class="image1" alt="Chill & Thrill blue">
+                <img src="Chill & Thrill blue back.jpg" class="image2" alt="Chill & Thrill blue">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Navy Blue</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill Navy Blue" data-price="49,999" data-image="Chill & Thrill blue back.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Ch.jpg" class="image1" alt="Chill & Thrill blue">
+                <img src="chill & thrill thick blue Back.jpg" class="image2" alt="Chill & Thrill blue">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Blue</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill Blue" data-price="49,999" data-image="Ch.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="chill & thrill pink edition front.jpg" class="image1" alt="Chill & Thrill">
+                <img src="chill & thrill pink edition back.jpg" class="image2" alt="Chill & Thrill ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Pink Edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill Pink Edition" data-price="49,999" data-image="chill & thrill pink edition front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Chill & Thrill brown front.jpg" class="image1" alt="Chill & Thrill brown">
+                <img src="Chill & Thrill brown black.jpg" class="image2" alt="Chill & Thrill brown">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Brown</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill brown" data-price="49,999" data-image="Chill & Thrill brown front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Chill & Thrill cream front.jpg" class="image1" alt="Chill & Thrill Light Yellow">
+                <img src="Chill & Thrill cream back.jpg" class="image2" alt="Chill & Thrill Light Yellow">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Chill & Thrill Light Yellow</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Chill & Thrill Light Yellow" data-price="49,999" data-image="Chill & Thrill cream front.jpg">Add to Bag</button>
+        </article>
+
+        
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Floral Reverie front.jpg" class="image1" alt="Floral Reverie ">
+                <img src="Floral Reverie front back.jpg" class="image2" alt="Floral Reverie ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Floral Reverie White</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Floral Reverie White" data-price="49,999" data-image="Floral Reverie front.jpg">Add to Bag</button>
+        </article>
+        
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Floral Reverie black front .jpg" class="image1" alt="Floral Reverie ">
+                <img src="Floral Reverie black back.jpg" class="image2" alt="Floral Reverie ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Floral Reverie Black</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Floral Reverie Black" data-price="49,999" data-image="Floral Reverie black front .jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Floral Reverie blue front.jpg" class="image1" alt="Floral Reverie ">
+                <img src="Floral Reverie blue back.jpg" class="image2" alt="Floral Reverie ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Floral Reverie Navy Blue</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Floral Reverie Navy Blue" data-price="49,999" data-image="Floral Reverie blue front.jpg">Add to Bag</button>
+        </article>
+
+
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Floral Reverie cream front.jpg" class="image1" alt="Floral Reverie ">
+                <img src="Floral Reverie cream back.jpg" class="image2" alt="Floral Reverie ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Floral Reverie light Yellow</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Floral Reverie light Yellow" data-price="49,999" data-image="Floral Reverie cream front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Floral Reverie brown front.jpg" class="image1" alt="Floral Reverie ">
+                <img src="Floral Reverie brown black.jpg" class="image2" alt="Floral Reverie ">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Floral Reverie Brown</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Floral Reverie Brown" data-price="49,999" data-image="Floral Reverie brown front.jpg">Add to Bag</button>
+        </article>
+
+
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles White</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles" data-price="49,999" data-image="Mind & Heart Chronicles front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles black front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles black back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles Black</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles Black" data-price="49,999" data-image="Mind & Heart Chronicles black front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles blue front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles blue back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles Navy Blue</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles Navy Blue" data-price="49,999" data-image="Mind & Heart Chronicles blue front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles thick blue front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles thick blue back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles Blue</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles Blue" data-price="49,999" data-image="Mind & Heart Chronicles thick blue front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles pink front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles pink back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles pink Edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles Pink Edition" data-price="49,999" data-image="Mind & Heart Chronicles pink front.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Mind & Heart Chronicles brown front.jpg" class="image1" alt="Tzealous Mind & Heart Chronicles">
+                <img src="Mind & Heart Chronicles brown back.jpg" class="image2" alt="Tzealous Mind & Heart Chronicles">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Mind & Heart Chronicles Brown</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Mind & Heart Chronicles Brown" data-price="49,999" data-image="Mind & Heart Chronicles brown front.jpg">Add to Bag</button>
+        </article>        
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Divine Ambition.jpg" class="image1" alt="Tzealous Divine Ambition">
+                <img src="Tzealous Divine Ambition 2.jpg" class="image2" alt="Tzealous Divine Ambition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Divine Ambition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Divine Ambition" data-price="49,999" data-image="Tzealous Divine Ambition.jpg">Add to Bag</button>
+        </article>
+        
+
+         <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzeaous Cosmic Zeal.jpg" class="image1" alt="Tzealous Cosmic Zeal">
+                <img src="4a08f2ad-6b9f-402c-9832-080c06c095e2.jpeg" class="image2" alt="Tzealous Cosmic Zeal">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Cosmic Zeal Black Edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Cosmic Zeal" data-price="49,999" data-image="Tzeaous Cosmic Zeal.jpg">Add to Bag</button>
+        </article>
+
+          <article class="product-card">
+            <div class="image-container">  
+                <img src="Cosmic Zeal white edition.jpg" class="image1" alt="Tzealous Cosmic Zeal white edition">
+                <img src="Cosmic Zeal White edition 3.jpg" class="image2" alt="Tzealous Cosmic Zeal white edition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Cosmic Zeal white edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Cosmic Zeal white edition" data-price="49,999" data-image="Cosmic Zeal white edition.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Fierce Realm white.jpg" class="image1" alt="Tzealous Fierce Realm white">
+                <img src="Fierce Realm2.jpg" class="image2" alt="Tzealous Fierce Realm white">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Fierce Realm white</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Fierce Realm white" data-price=49,999" data-image="Tzealous Fierce Realm white.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Bold Horizon White.jpg" class="image1" alt="Tzealous Bold Horizon White">
+                <img src="bold horizon white back.jpg" class="image2" alt="Tzealous Bold Horizon White">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Bold Horizon White</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <button class="add-to-bag-btn" data-name="Tzealous Bold Horizon White" data-price="49,999" data-image="Bold Horizon White.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Bold Horizon Black Edition.jpg" class="image1" alt="Tzealous Bold Horizon Black Edition">
+                <img src="Tzealous Bold Horizon Black Edition.jpg" class="image2" alt="Tzealous Bold Horizon Black Edition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Bold Horizon Black Edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Bold Horizon Black Edition" data-price="49,999" data-image="Tzealous Bold Horizon Black Edition.jpg">Add to Bag</button>
+        </article>
+
+         <article class="product-card">
+            <div class="image-container">  
+                <img src="Bold Horizons 2.jpg" class="image1" alt="Tzealous Bold Horizon Pink Edition">
+                <img src="Bold Horizons 3.jpg" class="image2" alt="Tzealous Bold Horizon Pink Edition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Bold Horizon Pink Edition</h3>
+
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Bold Horizon Pink Edition" data-price="49,999" data-image="Bold Horizons 2.jpg">Add to Bag</button>
+        </article>
+
+         <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous vibrant edge white.jpg" class="image1" alt="Tzealous Vibrant Edge white">
+                <img src="Tzealous Vibrant edge white Back.jpg" class="image2" alt="Tzealous Vibrant Edge white">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Vibrant Edge white</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous vibrant Edge white" data-price="49,999" data-image="Tzealous vibrant edge white.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous vibrant edge Black edition.jpg" class="image1" alt="Tzealous vibrant edge Black edition">
+                <img src="Tzealous vibrant edge Black edition back.jpg" class="image2" alt="Tzealous vibrant edge Black edition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous vibrant edge Black edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous vibrant edge Black edition" data-price="49,999" data-image="Tzealous vibrant edge Black edition.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Vibrant edge Pink edition.jpg" class="image1" alt="Vibrant edge Pink edition">
+                <img src="Vibrant edge Pink edition back.jpg" class="image2" alt="Vibrant edge Pink edition">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Vibrant edge Pink edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Vibrant edge Pink edition" data-price="49,999" data-image="Vibrant edge Pink edition.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Vibrant Edge.jpg" class="image1" alt="Tzealous Vibrant Edge">
+                <img src="Tzealous vibrant edge 2.jpg" class="image2" alt="Tzealous Vibrant Edge">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Vibrant edge Red edition</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Vibrant edge red edition" data-price="49,999" data-image="Tzealous Vibrant Edge.jpg">Add to Bag</button>
+        </article>
+
+        
+         <article class="product-card">
+            <div class="image-container">  
+                <img src="tzealous Tank black.jpg" class="image1" alt="tzealous Tank black.jpg">
+                <img src="Tzealous Black Tank 2.jpg" class="image2" alt="tzealous Tank black.jpg">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Black Tank</h3>
+            <p class="price">₦49,999</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous black tank" data-price="49,999" data-image="tzealous Tank black.jpg">Add to Bag</button>
+
+        </article> 
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous tank White.jpg" class="image1" alt="Tzealous tank White">
+                <img src="Tzealous Tank white 2.jpg" class="image2" alt="Tzealous tank White">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Tank White</h3>
+            <p class="price">₦24,799</p>
+            <select class="size-select">
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <button class="add-to-bag-btn" data-name="Tzealous Tank White" data-price="24799" data-image="Tzealous tank White.jpg">Add to Bag</button>
+        </article>
+
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="tzw black cap.png" class="image1" alt="tzw black cap">
+                <img src="tzw black cap.png" class="image2" alt="tzw black cap">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>TZW Black Cap</h3>
+            <p class="price">₦19,599</p>
+            <select class="size-select">
+                <option value="">pick any</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag0-btn" data-name="TZW Black Cap " data-price="19599" data-image="tzw black cap.png">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous Motion short.jpg" class="image1" alt="Tzealous Motion short">
+                <img src="Snapchat-1170764303.jpg" class="image2" alt="Tzealous Motion short">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Motion short</h3>
+            <p class="price">₦24,999</p>
+            <select class="size-select">
+                <option value="">pick any</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Motion short" data-price="24999" data-image="Tzealous Motion short">Add to Bag</button>
+        </article>
+
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Snapchat-216769699.jpg" class="image1" alt="Tzealous Beanies Black">
+                <img src="tzealous bold Horizon Black 2.jpg" class="image2" alt="Tzealous Beanies Black">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Beanies Black</h3>
+            <p class="price">₦15,699</p>
+            <select class="size-select">
+                <option value="">pick any</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Beanies Black" data-price="15699" data-image="Snapchat-216769699.jpg">Add to Bag</button>
+        </article>
+
+        <article class="product-card">
+            <div class="image-container">  
+                <img src="Tzealous head beanie red edition.jpg" class="image1" alt="Tzealous Beanies red">
+                <img src="red beanie.jpg" class="image2" alt="Tzealous Beanies red">
+            </div>
+            <p class="product-status">Just In</p>
+            <h3>Tzealous Beanies red</h3>
+            <p class="price">₦15,699</p>
+            <select class="size-select">
+                <option value="">pick any</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+                <option value="-">-</option>
+            </select>
+            <button class="add-to-bag-btn" data-name="Tzealous Beanies red" data-price="15,699" data-image="red beanie.jpg">Add to Bag</button>
+        </article>
+
+
+
+
+        <!-- Add more product cards as needed -->
+    </section>
+
+    <!-- Bag (Cart) Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Bag</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: ₦0</p>
+            <button id="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
+
+        </div>
+    </div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Tzealous World is your go-to brand for modern and stylish clothing. <br>We offer top-quality fashion products to meet your unique style.</p>
+        </div>
+
+        <!-- Customer Service Links -->
+        <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <!-- <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>              
+            </ul>
+        </div>  -->
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: support@fashionstore.com</p>
+            <p>Phone: +234 816 945 4690</p>
+            <p>Location: lagos, Nigeria</p>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tzealous World. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="Tzealous World.js"></script>
+    
+</body>
+</html>

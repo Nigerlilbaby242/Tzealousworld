@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Checkout Container */
+        .checkout-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cart Items List */
+        #checkout-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        #checkout-items li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #checkout-items img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        #checkout-items span {
+            flex-grow: 1;
+        }
+
+        /* Total Price */
+        #total-checkout-price {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Form Styles */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div class="checkout-container">
+        <h2>Your Order</h2>
+        <ul id="checkout-items"></ul>
+        <p id="total-checkout-price">Total: ₦0</p>
+        <form id="checkout-form">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Whatsapp so it can be easy to communicate" required>
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="region">Region:</label>
+            <input type="text" id="region" name="region" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="submit" id="confirm-order">Confirm Order</button>
+        </form>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const checkoutItemsList = document.getElementById('checkout-items');
+    const checkoutTotalPriceElement = document.getElementById('total-checkout-price');
+    const checkoutForm = document.getElementById('checkout-form');
+    const confirmOrderButton = document.getElementById('confirm-order');
+
+    // Telegram bot details
+    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN'; // Replace with your bot's token
+    const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID'; // Replace with your chat ID
+
+    // Display items in checkout section
+    function updateCheckoutDisplay() {
+        checkoutItemsList.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item) => {
+            const listItem = document.createElement('li');
+            const productImage = document.createElement('img');
+            const productDetails = document.createElement('span');
+
+            productImage.src = item.image;
+            productDetails.textContent = `${item.name} - ₦${item.price.toLocaleString()} - Size: ${item.size}`;
+
+            listItem.appendChild(productImage);
+            listItem.appendChild(productDetails);
+            checkoutItemsList.appendChild(listItem);
+
+            total += item.price;
+        });
+
+        checkoutTotalPriceElement.textContent = `Total: ₦${total.toLocaleString()}`;
+    }
+
+    // Send order details to Telegram
+    checkoutForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        // Collect form details
+        const fullname = document.getElementById('fullname').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const region = document.getElementById('region').value;
+        const city = document.getElementById('city').value;
+
+        let orderDetails = `Order Summary:\nFull Name: ${fullname}\nPhone: ${phone}\nAddress: ${address}, ${city}, ${region}\n\nItems:\n`;
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            orderDetails += `${index + 1}. ${item.name} - ₦${item.price.toLocaleString()} - Size: ${item.size}\n`;
+            total += item.price;
+        });
+
+        orderDetails += `\nTotal: ₦${total.toLocaleString()}`;
+
+        // Send the order details to Telegram
+        sendOrderToTelegram(orderDetails);
+    });
+
+    // Function to send the order details to Telegram
+    function sendOrderToTelegram(orderDetails) {
+        const url = `https://api.telegram.org/bot7466000672:AAHLWfplFgLHpOzVXZTsB7aBJjzEKwwEJQc/sendMessage`;
+
+        const payload = {
+            chat_id: 7459542004,
+            text: orderDetails
+        };
+
+        // Send the message using fetch API
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Order has being received you will get a phonecall soon, Or a Whatsapp message');
+                // Optionally, clear the cart and reset the form
+                localStorage.removeItem('cart');
+                cart = [];
+                updateCheckoutDisplay();
+                checkoutForm.reset();
+            } else {
+                alert('Failed to send order details. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error sending order details to Telegram.');
+        });
+    }
+
+    // Initialize checkout display on page load
+    updateCheckoutDisplay();
+});
+</script>
+</body>
+</html>
