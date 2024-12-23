@@ -121,11 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkoutItemsList = document.getElementById('checkout-items');
     const checkoutTotalPriceElement = document.getElementById('total-checkout-price');
     const checkoutForm = document.getElementById('checkout-form');
-    const confirmOrderButton = document.getElementById('confirm-order');
-
-    // Telegram bot details
-    const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN'; // Replace with your bot's token
-    const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID'; // Replace with your chat ID
 
     // Display items in checkout section
     function updateCheckoutDisplay() {
@@ -138,7 +133,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const productDetails = document.createElement('span');
 
             productImage.src = item.image;
+            productImage.alt = item.name;
+            productImage.style.width = '50px';
+            productImage.style.height = '50px';
+            productImage.style.marginRight = '10px';
+
             productDetails.textContent = `${item.name} - ₦${item.price.toLocaleString()} - Size: ${item.size}`;
+            listItem.style.display = 'flex';
+            listItem.style.alignItems = 'center';
+            listItem.style.marginBottom = '10px';
 
             listItem.appendChild(productImage);
             listItem.appendChild(productDetails);
@@ -150,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
         checkoutTotalPriceElement.textContent = `Total: ₦${total.toLocaleString()}`;
     }
 
-    // Send order details to Telegram
+    // Handle form submission
     checkoutForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -160,13 +163,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Collect form details
-        const fullname = document.getElementById('fullname').value;
-        const phone = document.getElementById('phone').value;
-        const address = document.getElementById('address').value;
-        const region = document.getElementById('region').value;
-        const city = document.getElementById('city').value;
+        const fullname = document.getElementById('fullname').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const region = document.getElementById('region').value.trim();
+        const city = document.getElementById('city').value.trim();
 
-        let orderDetails = `Order Summary:\nFull Name: ${fullname}\nPhone: ${phone}\nAddress: ${address}, ${city}, ${region}\n\nItems:\n`;
+        if (!fullname || !phone || !address || !region || !city) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        let orderDetails = `*Order Summary*\n\n` +
+            `*Name*: ${fullname}\n` +
+            `*Phone*: ${phone}\n` +
+            `*Address*: ${address}, ${city}, ${region}\n\n` +
+            `*Items:*\n`;
+
         let total = 0;
 
         cart.forEach((item, index) => {
@@ -174,51 +187,26 @@ document.addEventListener('DOMContentLoaded', function () {
             total += item.price;
         });
 
-        orderDetails += `\nTotal: ₦${total.toLocaleString()}`;
+        orderDetails += `\n*Total*: ₦${total.toLocaleString()}`;
 
-        // Send the order details to Telegram
-        sendOrderToTelegram(orderDetails);
+        // Open WhatsApp with the pre-filled message
+        sendOrderToWhatsApp(orderDetails);
     });
 
-    // Function to send the order details to Telegram
-    function sendOrderToTelegram(orderDetails) {
-        const url = `https://api.telegram.org/bot7466000672:AAHLWfplFgLHpOzVXZTsB7aBJjzEKwwEJQc/sendMessage`;
+    // Function to create the WhatsApp message link
+    function sendOrderToWhatsApp(orderDetails) {
+        const encodedMessage = encodeURIComponent(orderDetails); // Encode the message for use in a URL
+        const whatsappURL = `https://wa.me/2348101111313?text=${encodedMessage}`; // Replace with your phone number in international format
 
-        const payload = {
-            chat_id: 7459542004,
-            text: orderDetails
-        };
-
-        // Send the message using fetch API
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Order has being received you will get a phonecall soon, Or a Whatsapp message');
-                // Optionally, clear the cart and reset the form
-                localStorage.removeItem('cart');
-                cart = [];
-                updateCheckoutDisplay();
-                checkoutForm.reset();
-            } else {
-                alert('Failed to send order details. Please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error sending order details to Telegram.');
-        });
+        // Redirect the user to WhatsApp
+        window.open(whatsappURL, '_blank');
     }
 
     // Initialize checkout display on page load
     updateCheckoutDisplay();
 });
+
+
 </script>
 </body>
 </html>
