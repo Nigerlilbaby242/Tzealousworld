@@ -20,6 +20,12 @@ header {
     background-color: #d2d2d2;
     border-bottom: 1px solid #ddd;
 }
+header h1 {
+    text-align: center;
+    color: #000000;
+    font-family: 'playfair', serif;
+    padding-left:300px ;
+}
 
 /* Logo Styling */
 header .logo img {
