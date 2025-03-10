@@ -12,7 +12,7 @@ body {
 }
 
 /* Header Section */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +20,7 @@ header {
     background-color: #d2d2d2;
     border-bottom: 1px solid #ddd;
 }
-header h1 {
+.header h1 {
     text-align: center;
     color: #000000;
     font-family: 'playfair', serif;
@@ -28,24 +28,24 @@ header h1 {
 }
 
 /* Logo Styling */
-header .logo img {
+.header .logo img {
     width: 50px;
 }
 
 /* Main Navigation Links (Centered) */
-header .main-nav {
+.header .main-nav {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-header .main-nav ul {
+.header .main-nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-header .main-nav ul li a {
+.header .main-nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 16px;
@@ -53,18 +53,37 @@ header .main-nav ul li a {
 }
 
 /* Right Navigation Icons (User, Bag) */
-header .nav-icons ul {
+.header .nav-icons ul {
     list-style: none;
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-header .nav-icons ul li a {
+.header .nav-icons ul li a {
     text-decoration: none;
     color: black;
     font-size: 20px; /* Icon size */
 }
+
+.blue{
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: slidedown 0.7s forwards ;
+    width: 100%;
+    z-index: 1000;
+}
+
+@keyframes slidedown {
+    from{
+        top: -250px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
 
 /* Product Grid Layout */
 .product-grid {

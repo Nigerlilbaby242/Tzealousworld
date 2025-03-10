@@ -116,3 +116,9 @@ productCards.forEach(card => {
         card.querySelector('.image2').style.animationPlayState = 'running';
     });
 });
+
+
+const navbar = document.querySelector(".header")
+window.addEventListener("scroll", () => {
+  this.scrollY > 100 ? navbar.classList.add("blue") : navbar.classList.remove("blue")
+})
